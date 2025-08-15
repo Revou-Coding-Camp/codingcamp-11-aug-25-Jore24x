@@ -20,7 +20,7 @@ namaForm.addEventListener("submit", function (event) {
 
   const nama = document.getElementById("input-nama").value;
 
-  sapaanElemen.textContent = ` ${nama},`;
+  sapaanElemen.textContent = ` ${nama}`;
 
   sembunyikanModal();
 });
@@ -45,18 +45,21 @@ formMessage.addEventListener("submit", function (event) {
   const tanggalLahir = document.getElementById("input-tanggal-lahir").value;
 
   // Mendapatkan nilai radio button yang dicentang
-  const jenisKelaminInput = document.querySelector('input[name="jenis-kelamin"]:checked');
-  const jenisKelaminValue = jenisKelaminInput ? jenisKelaminInput.value : '';
+  const jenisKelaminInput = document.querySelector(
+    'input[name="jenis-kelamin"]:checked'
+  );
+  const jenisKelaminValue = jenisKelaminInput ? jenisKelaminInput.value : "";
 
   const pesanValue = document.getElementById("input-pesan").value;
 
   setSubmitTime();
   document.getElementById("nama-output").textContent = nama;
   document.getElementById("tl-output").textContent = tanggalLahir;
-  document.getElementById("jenis-kelamin-output").textContent = jenisKelaminValue;
+  document.getElementById("jenis-kelamin-output").textContent =
+    jenisKelaminValue;
   document.getElementById("pesan-output").textContent = pesanValue;
 
-  document.getElementById('message-list').style.display = 'block';
+  document.getElementById("message-list").style.display = "block";
 });
 
 window.onload = tampilkanModal;
